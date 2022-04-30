@@ -1,29 +1,29 @@
 from random import randint
 from colorama import Fore, Back, Style
 
-choice = ["Schere", "Stein", "Papier"]
+choice = ["Rock", "Paper", "Scissors"]
 
 computer = choice[randint(0,2)]
 
-print(Fore.BLUE + "Willkommen bei Schere, Stein, Papier!")
+print(Fore.BLUE + "Welcome to Rock, Paper, Scissors!")
 print()
-player = input(Fore.YELLOW + "Deine Wahl: ")
+player = input(Fore.YELLOW + "Your choice: ")
 print()
-print (Fore.BLUE + "Der Computer hat " + computer + " gewählt")
+print (Fore.BLUE + "Computer choosed" + computer)
 print()
 
 if player == computer:
-    print(Fore.YELLOW + "Unentschieden!")
-elif player == "Schere" and computer == "Stein":
-    print (Fore.RED + "Der Computer gewinnt!")
-elif player == "Schere" and computer == "Papier":
-    print (Fore.GREEN + "Du gewinnst!")
-elif player == "Stein" and computer == "Papier":
-    print (Fore.RED + "Der Computer gewinnt!")
-elif player == "Stein" and computer == "Schere":
-    print (Fore.GREEN + "Du gewinnst!")
-elif player == "Papier" and computer == "Schere":
-    print (Fore.RED + "Der Computer gewinnt!")
-elif player == "Papier" and computer == "Stein":
-    print (Fore.GREEN + "Du gewinnst!")
+    print(Fore.YELLOW + "Draw!")
+elif player == "Scissors" and computer == "Rock":
+    print (Fore.RED + "Computer wins!")
+elif player == "Scissors" and computer == "Paper":
+    print (Fore.GREEN + "You win!")
+elif player == "Rock" and computer == "Paper":
+    print (Fore.RED + "Computer wins!")
+elif player == "Rock" and computer == "Scissors":
+    print (Fore.GREEN + "You win!")
+elif player == "Paper" and computer == "Scissors":
+    print (Fore.RED + "Computer wins!")
+elif player == "Paper" and computer == "Rock":
+    print (Fore.GREEN + "You win!")
 
